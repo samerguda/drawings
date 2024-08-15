@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and PDF Files</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Station Name</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Station 1</td>
+                    <td>Note for Station 1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Station 2</td>
+                    <td>Note for Station 2</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <!-- PDF Files -->
+        <div class="pdf-container">
+            <h2>PDF Files</h2>
+            <ul>
+                <li><a href="pdf/file1.pdf" target="_blank">Preview PDF 1</a> | <a href="pdf/file1.pdf" download>Download PDF 1</a></li>
+                <li><a href="pdf/file2.pdf" target="_blank">Preview PDF 2</a> | <a href="pdf/file2.pdf" download>Download PDF 2</a></li>
+                <li><a href="pdf/file3.pdf" target="_blank">Preview PDF 3</a> | <a href="pdf/file3.pdf" download>Download PDF 3</a></li>
+                <!-- Add more PDF links up to 15 -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pdf-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container h2 {
+    margin-top: 0;
+}
+
+.pdf-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pdf-container li {
+    margin-bottom: 10px;
+}
+
+.pdf-container a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.pdf-container a:hover {
+    text-decoration: underline;
+}
+
+
+</style >
