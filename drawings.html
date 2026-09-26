@@ -1,113 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table and PDF Files</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>French A1 70 verbes </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .copy-btn {
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+
+        .copy-btn:hover {
+            background-color: #219150;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .section-title {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .list-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        ol {
+            padding-right: 20px;
+            margin: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 1.05rem;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .arabic {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-left: 5px;
+        }
+
+        .english {
+            color: #2980b9;
+            font-weight: 600;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .french {
+            color: #e67e22;
+            font-style: italic;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .separator {
+            color: #bdc3c7;
+            margin: 0 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Table -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Index</th>
-                    <th>Station Name</th>
-                    <th>Note</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Station 1</td>
-                    <td>Note for Station 1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Station 2</td>
-                    <td>Note for Station 2</td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </tbody>
-        </table>
 
-        <!-- PDF Files -->
-        <div class="pdf-container">
-            <h2>PDF Files</h2>
-            <ul>
-                <li><a href="pdf/file1.pdf" target="_blank">Preview PDF 1</a> | <a href="pdf/file1.pdf" download>Download PDF 1</a></li>
-                <li><a href="pdf/file2.pdf" target="_blank">Preview PDF 2</a> | <a href="pdf/file2.pdf" download>Download PDF 2</a></li>
-                <li><a href="pdf/file3.pdf" target="_blank">Preview PDF 3</a> | <a href="pdf/file3.pdf" download>Download PDF 3</a></li>
-                <!-- Add more PDF links up to 15 -->
-            </ul>
-        </div>
+    <div class="header-container">
+        <h1>🌐 قائمة الأفعال الأساسية (1–70)</h1>
+        <button class="copy-btn" onclick="copyListText()">
+            📋 نسخ القائمة كاملة
+        </button>
     </div>
+
+    <div class="list-container" id="verbsContent">
+
+        <div class="section-title">قائمة الأفعال الأكثر استخداماً (عربي - إنجليزي - فرنسي)</div>
+        <ol start="1">
+            <li><span class="arabic">يَكُونُ</span> <span class="separator">—</span> <span class="english">be</span> <span class="separator">—</span> <span class="french">être</span></li>
+            <li><span class="arabic">يَصِيرُ</span> <span class="separator">—</span> <span class="english">become</span> <span class="separator">—</span> <span class="french">devenir</span></li>
+            <li><span class="arabic">يَفْعَلُ</span> <span class="separator">—</span> <span class="english">do, make</span> <span class="separator">—</span> <span class="french">faire</span></li>
+            <li><span class="arabic">يَذْهَبُ</span> <span class="separator">—</span> <span class="english">go</span> <span class="separator">—</span> <span class="french">aller</span></li>
+            <li><span class="arabic">يَجِيءُ</span> <span class="separator">—</span> <span class="english">come</span> <span class="separator">—</span> <span class="french">venir</span></li>
+            <li><span class="arabic">يَأْخُذُ</span> <span class="separator">—</span> <span class="english">take</span> <span class="separator">—</span> <span class="french">prendre</span></li>
+            <li><span class="arabic">يُعْطِي</span> <span class="separator">—</span> <span class="english">give</span> <span class="separator">—</span> <span class="french">donner</span></li>
+            <li><span class="arabic">يَحْصُلُ عَلَى</span> <span class="separator">—</span> <span class="english">get, receive</span> <span class="separator">—</span> <span class="french">recevoir</span></li>
+            <li><span class="arabic">يَرَى</span> <span class="separator">—</span> <span class="english">see</span> <span class="separator">—</span> <span class="french">voir</span></li>
+            <li><span class="arabic">يَنْظُرُ</span> <span class="separator">—</span> <span class="english">look</span> <span class="separator">—</span> <span class="french">regarder</span></li>
+            <li><span class="arabic">يُشَاهِدُ</span> <span class="separator">—</span> <span class="english">watch</span> <span class="separator">—</span> <span class="french">regarder</span></li>
+            <li><span class="arabic">يَسْمَعُ</span> <span class="separator">—</span> <span class="english">hear</span> <span class="separator">—</span> <span class="french">entendre</span></li>
+            <li><span class="arabic">يَسْتَمِعُ</span> <span class="separator">—</span> <span class="english">listen</span> <span class="separator">—</span> <span class="french">écouter</span></li>
+            <li><span class="arabic">يَقُولُ</span> <span class="separator">—</span> <span class="english">say</span> <span class="separator">—</span> <span class="french">dire</span></li>
+            <li><span class="arabic">يُخْبِرُ</span> <span class="separator">—</span> <span class="english">tell</span> <span class="separator">—</span> <span class="french">dire</span></li>
+            <li><span class="arabic">يَتَكَلَّمُ</span> <span class="separator">—</span> <span class="english">speak</span> <span class="separator">—</span> <span class="french">parler</span></li>
+            <li><span class="arabic">يَتَحَدَّثُ</span> <span class="separator">—</span> <span class="english">talk</span> <span class="separator">—</span> <span class="french">parler</span></li>
+            <li><span class="arabic">يَسْأَلُ</span> <span class="separator">—</span> <span class="english">ask</span> <span class="separator">—</span> <span class="french">demander</span></li>
+            <li><span class="arabic">يُجِيبُ</span> <span class="separator">—</span> <span class="english">answer</span> <span class="separator">—</span> <span class="french">répondre</span></li>
+            <li><span class="arabic">يَعْرِفُ</span> <span class="separator">—</span> <span class="english">know</span> <span class="separator">—</span> <span class="french">savoir</span></li>
+            <li><span class="arabic">يُفَكِّرُ</span> <span class="separator">—</span> <span class="english">think</span> <span class="separator">—</span> <span class="french">penser</span></li>
+            <li><span class="arabic">يَفْهَمُ</span> <span class="separator">—</span> <span class="english">understand</span> <span class="separator">—</span> <span class="french">comprendre</span></li>
+            <li><span class="arabic">يَتَعَلَّمُ</span> <span class="separator">—</span> <span class="english">learn</span> <span class="separator">—</span> <span class="french">apprendre</span></li>
+            <li><span class="arabic">يَقْرَأُ</span> <span class="separator">—</span> <span class="english">read</span> <span class="separator">—</span> <span class="french">lire</span></li>
+            <li><span class="arabic">يَكْتُبُ</span> <span class="separator">—</span> <span class="english">write</span> <span class="separator">—</span> <span class="french">écrire</span></li>
+            <li><span class="arabic">يَفْتَحُ</span> <span class="separator">—</span> <span class="english">open</span> <span class="separator">—</span> <span class="french">ouvrir</span></li>
+            <li><span class="arabic">يُغْلِقُ</span> <span class="separator">—</span> <span class="english">close</span> <span class="separator">—</span> <span class="french">fermer</span></li>
+            <li><span class="arabic">يَبْدَأُ</span> <span class="separator">—</span> <span class="english">start, begin</span> <span class="separator">—</span> <span class="french">commencer</span></li>
+            <li><span class="arabic">يَنْتَهِي</span> <span class="separator">—</span> <span class="english">finish</span> <span class="separator">—</span> <span class="french">finir</span></li>
+            <li><span class="arabic">يَتَوَقَّفُ</span> <span class="separator">—</span> <span class="english">stop</span> <span class="separator">—</span> <span class="french">arrêter</span></li>
+            <li><span class="arabic">يَعْمَلُ</span> <span class="separator">—</span> <span class="english">work</span> <span class="separator">—</span> <span class="french">travailler</span></li>
+            <li><span class="arabic">يَدْرُسُ</span> <span class="separator">—</span> <span class="english">study</span> <span class="separator">—</span> <span class="french">étudier</span></li>
+            <li><span class="arabic">يَعِيشُ</span> <span class="separator">—</span> <span class="english">live</span> <span class="separator">—</span> <span class="french">vivre</span></li>
+            <li><span class="arabic">يَسْكُنُ</span> <span class="separator">—</span> <span class="english">live, reside</span> <span class="separator">—</span> <span class="french">habiter</span></li>
+            <li><span class="arabic">يَبْقَى</span> <span class="separator">—</span> <span class="english">stay</span> <span class="separator">—</span> <span class="french">rester</span></li>
+            <li><span class="arabic">يَأْكُلُ</span> <span class="separator">—</span> <span class="english">eat</span> <span class="separator">—</span> <span class="french">manger</span></li>
+            <li><span class="arabic">يَشْرَبُ</span> <span class="separator">—</span> <span class="english">drink</span> <span class="separator">—</span> <span class="french">boire</span></li>
+            <li><span class="arabic">يَطْبُخُ</span> <span class="separator">—</span> <span class="english">cook</span> <span class="separator">—</span> <span class="french">cuisiner</span></li>
+            <li><span class="arabic">يَشْتَرِي</span> <span class="separator">—</span> <span class="english">buy</span> <span class="separator">—</span> <span class="french">acheter</span></li>
+            <li><span class="arabic">يَبِيعُ</span> <span class="separator">—</span> <span class="english">sell</span> <span class="separator">—</span> <span class="french">vendre</span></li>
+            <li><span class="arabic">يَدْفَعُ</span> <span class="separator">—</span> <span class="english">pay</span> <span class="separator">—</span> <span class="french">payer</span></li>
+            <li><span class="arabic">يَسْتَخْدِمُ</span> <span class="separator">—</span> <span class="english">use</span> <span class="separator">—</span> <span class="french">utiliser</span></li>
+            <li><span class="arabic">يَحْتَاجُ</span> <span class="separator">—</span> <span class="english">need</span> <span class="separator">—</span> <span class="french">avoir besoin de</span></li>
+            <li><span class="arabic">يُرِيدُ</span> <span class="separator">—</span> <span class="english">want</span> <span class="separator">—</span> <span class="french">vouloir</span></li>
+            <li><span class="arabic">يُحِبُّ</span> <span class="separator">—</span> <span class="english">like, love</span> <span class="separator">—</span> <span class="french">aimer</span></li>
+            <li><span class="arabic">يُسَاعِدُ</span> <span class="separator">—</span> <span class="english">help</span> <span class="separator">—</span> <span class="french">aider</span></li>
+            <li><span class="arabic">يَتَّصِلُ</span> <span class="separator">—</span> <span class="english">call (phone)</span> <span class="separator">—</span> <span class="french">appeler</span></li>
+            <li><span class="arabic">يَنْتَظِرُ</span> <span class="separator">—</span> <span class="english">wait</span> <span class="separator">—</span> <span class="french">attendre</span></li>
+            <li><span class="arabic">يَجِدُ</span> <span class="separator">—</span> <span class="english">find</span> <span class="separator">—</span> <span class="french">trouver</span></li>
+            <li><span class="arabic">يَفْقِدُ</span> <span class="separator">—</span> <span class="english">lose</span> <span class="separator">—</span> <span class="french">perdre</span></li>
+            <li><span class="arabic">يُحْضِرُ</span> <span class="separator">—</span> <span class="english">bring</span> <span class="separator">—</span> <span class="french">apporter</span></li>
+            <li><span class="arabic">يَحْمِلُ</span> <span class="separator">—</span> <span class="english">carry</span> <span class="separator">—</span> <span class="french">porter</span></li>
+            <li><span class="arabic">يَضَعُ</span> <span class="separator">—</span> <span class="english">put</span> <span class="separator">—</span> <span class="french">mettre</span></li>
+            <li><span class="arabic">يَحْتَفِظُ</span> <span class="separator">—</span> <span class="english">keep</span> <span class="separator">—</span> <span class="french">garder</span></li>
+            <li><span class="arabic">يُظْهِرُ</span> <span class="separator">—</span> <span class="english">show</span> <span class="separator">—</span> <span class="french">montrer</span></li>
+            <li><span class="arabic">يَلْعَبُ</span> <span class="separator">—</span> <span class="english">play</span> <span class="separator">—</span> <span class="french">jouer</span></li>
+            <li><span class="arabic">يَقُودُ</span> <span class="separator">—</span> <span class="english">drive</span> <span class="separator">—</span> <span class="french">conduire</span></li>
+            <li><span class="arabic">يَمْشِي</span> <span class="separator">—</span> <span class="english">walk</span> <span class="separator">—</span> <span class="french">marcher</span></li>
+            <li><span class="arabic">يَرْكُضُ</span> <span class="separator">—</span> <span class="english">run</span> <span class="separator">—</span> <span class="french">courir</span></li>
+            <li><span class="arabic">يَجْلِسُ</span> <span class="separator">—</span> <span class="english">sit</span> <span class="separator">—</span> <span class="french">s'asseoir</span></li>
+            <li><span class="arabic">يَقِفُ</span> <span class="separator">—</span> <span class="english">stand</span> <span class="separator">—</span> <span class="french">se tenir debout</span></li>
+            <li><span class="arabic">يَنَامُ</span> <span class="separator">—</span> <span class="english">sleep</span> <span class="separator">—</span> <span class="french">dormir</span></li>
+            <li><span class="arabic">يَسْتَيْقِظُ</span> <span class="separator">—</span> <span class="english">wake up</span> <span class="separator">—</span> <span class="french">se réveiller</span></li>
+            <li><span class="arabic">يَغْسِلُ</span> <span class="separator">—</span> <span class="english">wash</span> <span class="separator">—</span> <span class="french">laver</span></li>
+            <li><span class="arabic">يُنَظِّفُ</span> <span class="separator">—</span> <span class="english">clean</span> <span class="separator">—</span> <span class="french">nettoyer</span></li>
+            <li><span class="arabic">يَلْبَسُ</span> <span class="separator">—</span> <span class="english">wear</span> <span class="separator">—</span> <span class="french">porter</span></li>
+            <li><span class="arabic">يُسَافِرُ</span> <span class="separator">—</span> <span class="english">travel</span> <span class="separator">—</span> <span class="french">voyager</span></li>
+            <li><span class="arabic">يَزُورُ</span> <span class="separator">—</span> <span class="english">visit</span> <span class="separator">—</span> <span class="french">visiter</span></li>
+            <li><span class="arabic">يَتَذَكَّرُ</span> <span class="separator">—</span> <span class="english">remember</span> <span class="separator">—</span> <span class="french">se souvenir de</span></li>
+            <li><span class="arabic">يَنْسَى</span> <span class="separator">—</span> <span class="english">forget</span> <span class="separator">—</span> <span class="french">oublier</span></li>
+        </ol>
+
+    </div>
+
+    <script>
+        function copyListText() {
+            const listElement = document.getElementById('verbsContent');
+            const textToCopy = listElement.innerText;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerHTML;
+                
+                btn.innerHTML = '✅ تم النسخ بنجاح!';
+                btn.style.backgroundColor = '#16a085';
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '#27ae60';
+                }, 2000);
+            }).catch(err => {
+                alert('حدث خطأ أثناء النسخ: ' + err);
+            });
+        }
+    </script>
+
 </body>
 </html>
-
-
-
-<style>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-table th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.pdf-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.pdf-container h2 {
-    margin-top: 0;
-}
-
-.pdf-container ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.pdf-container li {
-    margin-bottom: 10px;
-}
-
-.pdf-container a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-.pdf-container a:hover {
-    text-decoration: underline;
-}
-
-
-</style >
